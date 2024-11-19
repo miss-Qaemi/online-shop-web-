@@ -56,6 +56,11 @@ header{
     width: 8px;
     margin-right: 8px;
 }
+.hamburger{
+    width: 27px;
+    display: none;
+}
+
 @media(max-width:1200px){
     header{
         width: 940px;
@@ -78,6 +83,9 @@ header{
     }
 }
 @media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
     .header-ul{
         display: none;
     }
@@ -86,7 +94,6 @@ header{
         padding: 8px 10px;
     }
 }
-@media(max-width:){}
 
 
 
