@@ -8,23 +8,23 @@ body{
     
 }
 
-header{
-    display: flex;
+header {
+    display:flex;
     justify-content: space-between;
     align-items: center;
     width: 1170px;
-    margin:  auto;
+    margin: auto;
     padding: 21px 0 7px;
-    background-color: rgba(255, 255, 255,0.72);
-    position: sticky;
+    background-color: rgba(2555, 255, 255, 0.72);
     backdrop-filter: blur(20px);
+    position: sticky;
     top: 0;
     transition: all 0.3s ease;
 }
-.logo{
-    margin: 11px 23px;
-}
 
+.logo{
+    margin: 11px 28px;
+}
 .header-ul{
     display: flex;
     list-style: none;
@@ -33,7 +33,7 @@ header{
     font-size: 14px;
     margin: 0 15px;
 }
-.header-ul li a {
+.header-ul li a{
     cursor: pointer;
     text-decoration: none;
     color: #303030;
@@ -43,30 +43,156 @@ header{
     background-color: rgba(232, 239, 254, 0.6);
     padding: 10px 27px;
     margin-right: 20px;
+    font-family:'YekanBakhMedium' ;
     border-radius: 20px;
-    font-family: YekanBakhBold;
+
 }
-.header-ul > li:last-child :hover{
+.header-ul > li:last-child a:hover{
     background-color: #fbf6d9;
+
+
 }
 .more-menu{
     display: flex;
 }
 .more-menu img{
-    width: 8px;
+    width: 8px ;
     margin-right: 8px;
+
 }
-.hamburger{
-    width: 27px;
+.hamburger-icon{
     display: none;
 }
+.hamburger-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 100;
+    width: 100%;
+    font-family: YekanBakhMedium;
+    transform: translateY(-100%);
+}
+.cross-icon{
+    width: 100%;
+    text-align: left;
+    padding: 25px 0;
+}
+.cross-icon img{
+    width: 20px;
+    margin-left: 30px;
+}
+.hamburger-menu-items{
+    padding: 10px 30px;
+}
+.hamburger-menu-items ul{
+    list-style: none;
+}
+.hamburger-menu-items a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 3px 0;
+}
+.hamburger-menu-items div{
+    height: 1px;
+    background-color: #dfe1e4;
+    width: 90%;
+    margin: 8px 0;
 
-@media(max-width:1200px){
+}
+.more-item{
+    display: flex;
+    background-color: #eee;
+    padding: 20px 50px;
+    align-items: center;
+}
+.more-item img{
+    width:15px;
+    margin-right: 5px;
+}
+.more-item a{
+    text-decoration: none;
+    color:#28457b;
+    font-size: 0.85rem;
+}
+.show-hamburger-menu{
+    animation: fadeInDown 0.2s forwards;
+}
+#show-more-menu{
+    position:relative ;
+}
+#show-more-menu ul{
+    position: absolute;
+    top: 0;
+    left: -35px;
+    background-color: #fff;
+    border-top: 5px solid #f8e88b;
+    border-radius: 12px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 23px;
+    list-style: none;
+    width: 123px;
+}
+#show-more-menu li{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    color: black;
+
+}
+#show-more-menu li:hover{
+    background-color: rgba(232, 239, 254, 0.6);
+}
+#show-product-menu{
+    position: relative;
+}
+.product-menu{
+    position: absolute;
+    top: 0;
+    left: -35px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    width: 372px;
+    border-top: 5px solid #f8e88b;
+    border-radius: 12px;
+    padding-top: 5px;
+    margin-top: 23px;
+}
+.product-menu a p:first-child{
+    color: #000;
+    font-size: 0.95rem;
+}
+.product-menu a p:last-child{
+    color: #000;
+    font-size: 0.7rem;
+}
+.product-menu a{
+    margin: 10px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@keyframes fadeInDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-100);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+@media (max-width:1200px ){
     header{
         width: 940px;
     }
 }
-@media(max-width:990px){
+@media (max-width:990px ){
     header{
         width: auto;
         padding: 20px 60px;
@@ -76,25 +202,21 @@ header{
     }
     .logo{
         margin: 0;
-
     }
     .header-ul li{
         margin: 0 10px;
     }
 }
-@media(max-width:768px){
-    .hamburger{
-        display: block;
-    }
+@media (max-width:768px ){
     .header-ul{
-        display: none;
+    display: none;
     }
     header{
         width: auto;
-        padding: 8px 10px;
+        padding: 10px 8px;
     }
+    .hamburger-icon{
+        display: block;
+    }
+
 }
-
-
-
-
